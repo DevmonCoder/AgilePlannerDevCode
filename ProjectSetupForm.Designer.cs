@@ -1,6 +1,6 @@
 ﻿namespace AgilePlannerDevCode
 {
-    partial class formMain
+    partial class ProjectSetupForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -66,7 +66,7 @@
             buttonSubmit.UseVisualStyleBackColor = false;
             buttonSubmit.Click += buttonSubmit_Click;
             // 
-            // formMain
+            // ProjectSetupForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -75,7 +75,7 @@
             Controls.Add(buttonSubmit);
             Controls.Add(textBoxProjectName);
             Controls.Add(labelTitle);
-            Name = "formMain";
+            Name = "ProjectSetupForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agile Planner - Project Setup";
             Load += Form1_Load;
