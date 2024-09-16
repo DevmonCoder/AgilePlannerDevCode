@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             labelTitle = new Label();
-            textBoxProjectName = new TextBox();
-            buttonSubmit = new Button();
+            txtProjectName = new TextBox();
+            btnSubmit = new Button();
+            btnGoToBacklog = new Button();
             SuspendLayout();
             // 
             // labelTitle
@@ -44,27 +45,41 @@
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Enter Projec Name";
             // 
-            // textBoxProjectName
+            // txtProjectName
             // 
-            textBoxProjectName.Font = new Font("Segoe UI", 12F);
-            textBoxProjectName.ForeColor = Color.Black;
-            textBoxProjectName.Location = new Point(150, 120);
-            textBoxProjectName.Name = "textBoxProjectName";
-            textBoxProjectName.Size = new Size(300, 39);
-            textBoxProjectName.TabIndex = 1;
+            txtProjectName.Font = new Font("Segoe UI", 12F);
+            txtProjectName.ForeColor = Color.Black;
+            txtProjectName.Location = new Point(155, 120);
+            txtProjectName.Name = "txtProjectName";
+            txtProjectName.Size = new Size(300, 39);
+            txtProjectName.TabIndex = 1;
+            txtProjectName.TextChanged += txtProjectName_TextChanged;
             // 
-            // buttonSubmit
+            // btnSubmit
             // 
-            buttonSubmit.BackColor = Color.FromArgb(0, 122, 204);
-            buttonSubmit.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            buttonSubmit.ForeColor = Color.White;
-            buttonSubmit.Location = new Point(225, 180);
-            buttonSubmit.Name = "buttonSubmit";
-            buttonSubmit.Size = new Size(150, 40);
-            buttonSubmit.TabIndex = 2;
-            buttonSubmit.Text = "Create Project";
-            buttonSubmit.UseVisualStyleBackColor = false;
-            buttonSubmit.Click += buttonSubmit_Click;
+            btnSubmit.BackColor = Color.FromArgb(0, 122, 204);
+            btnSubmit.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnSubmit.ForeColor = Color.White;
+            btnSubmit.Location = new Point(230, 180);
+            btnSubmit.Name = "btnSubmit";
+            btnSubmit.Size = new Size(150, 40);
+            btnSubmit.TabIndex = 2;
+            btnSubmit.Text = "Create Project";
+            btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += buttonSubmit_Click;
+            // 
+            // btnGoToBacklog
+            // 
+            btnGoToBacklog.BackColor = Color.FromArgb(0, 122, 204);
+            btnGoToBacklog.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnGoToBacklog.ForeColor = Color.White;
+            btnGoToBacklog.Location = new Point(230, 238);
+            btnGoToBacklog.Name = "btnGoToBacklog";
+            btnGoToBacklog.Size = new Size(150, 40);
+            btnGoToBacklog.TabIndex = 3;
+            btnGoToBacklog.Text = "Next";
+            btnGoToBacklog.UseVisualStyleBackColor = false;
+            btnGoToBacklog.Click += btnGoToBacklog_Click;
             // 
             // ProjectSetupForm
             // 
@@ -72,8 +87,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(578, 344);
-            Controls.Add(buttonSubmit);
-            Controls.Add(textBoxProjectName);
+            Controls.Add(btnGoToBacklog);
+            Controls.Add(btnSubmit);
+            Controls.Add(txtProjectName);
             Controls.Add(labelTitle);
             Name = "ProjectSetupForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -86,7 +102,8 @@
         #endregion
 
         private Label labelTitle;
-        private TextBox textBoxProjectName;
-        private Button buttonSubmit;
+        private TextBox txtProjectName;
+        private Button btnSubmit;
+        private Button btnGoToBacklog;
     }
 }
